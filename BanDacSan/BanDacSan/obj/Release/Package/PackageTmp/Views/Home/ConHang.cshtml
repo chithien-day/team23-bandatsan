@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "ConHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách sản phẩm còn hàng</h2>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        if (item.SoLuong > 0)
+        {
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <div class="panel panel-heading">
+                    <strong>@item.TenSanPham</strong>
+                </div>
+
+                <div class="panel-body">
+                    <p><strong>Vùng: </strong>@item.Vung.TenVung</p>
+
+                    <p><strong>Tên sản phẩm: </strong>@item.TenSanPham</p>
+
+                    <p><img src="@item.HinhAnh" alt="Ảnh bìa" width="300" height="200" /></p>
+
+                    <p><strong>Giá tiền: </strong>@item.GiaTien</p>
+
+                    <p><strong>Số lượng: </strong>@item.SoLuong</p>
+
+                    <p><strong>Mô tả: </strong>@item.MoTa</p>
+
+                    <div class="panel-footer clearfix">
+                        <div class="pull-right">
+                            <div class="GioHang">
+                                <a class="btn btn-success" href="@Url.Action("GioHang","Home")">Đặt hàng</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        }
+     }
+</div>
+

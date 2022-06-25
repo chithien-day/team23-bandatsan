@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BanDacSanConnectionString-Web.config Connection String" description="BanDacSanConnectionString Connection String used in web.config by the application to access the database." defaultValue="Data Source=CHITHIEN;Initial Catalog=BanDacSan;Persist Security Info=True;User ID=sa;Password=123456" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\6_Web\\DoAn\\BanDacSan\\BanDacSan\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BanDacSanConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

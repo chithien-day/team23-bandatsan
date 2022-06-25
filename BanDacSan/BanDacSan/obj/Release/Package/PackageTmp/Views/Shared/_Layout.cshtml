@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>BÁN ĐẶC SẢN</title>
+
+    <!-- slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+    <!-- bootstrap core css -->
+
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+
+    <link href="~/css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+
+    <link href="~/css/responsive.css" rel="stylesheet" />
+
+    @Styles.Render("~/Content/css")
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                        <img src="~/images/logo.png" alt="">
+                        <span>
+                            Bán đặc sản
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+                            <ul class="navbar-nav  ">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href=@Url.Action("ConHang", "Home")>Còn Hàng</a>
+                                </li>
+
+                                <li class="nav-item pull-right">
+                                    <a class="nav-link" href="@Url.Action("GioHang", "GioHang")">Giỏ hàng</a>
+                                </li>
+
+                                <li class="nav-item pull-right">
+                                    <a class="nav-link" href="@Url.Action("DangKy", "NguoiDung")">Đăng ký</a>
+                                </li>
+
+                                <li class="nav-item pull-right">
+                                    <a class="nav-link" href="@Url.Action("DangNhap", "NguoiDung")">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <section class="info_section layout_padding">
+                <div class="container">
+                    <div class="info_social">
+                        <div>
+                            <a href="https://www.facebook.com/chithien.vitamin">
+                                <img src="~/images/fb.png" alt="">
+                            </a>
+                        </div>
+            
+                        <div>
+                            <a href="https://github.com/chithien-ne/team23-bandatsan">
+                                <img src="~/images/github.png" alt="">
+
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/chithien_day/?hl=vi">
+                                <img src="~/images/insta.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                              LIÊN HỆ VỚI CHÚNG TÔI QUA CÁC KÊNH TRÊN
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @RenderSection("upload", required: false)
+
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+
+    <script src="~/js/bootstrap.js"></script>
+
+
+
+</body>
+
+
+</html>

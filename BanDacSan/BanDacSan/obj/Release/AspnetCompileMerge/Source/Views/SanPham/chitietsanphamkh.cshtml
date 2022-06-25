@@ -1,0 +1,41 @@
+﻿@model BanDacSan.Models.SanPham
+
+@{
+    ViewBag.Title = "chitietsanphamkh";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết sản phẩm</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>ID Sản phẩm</dt>
+        <dd>@Html.DisplayFor(model => model.IDSanPham)</dd>
+
+        <dt>ID Vùng</dt>
+        <dd>@Html.DisplayFor(model => model.IDVung)</dd>
+
+        <dt>Tên Vùng</dt>
+        <dd>@Html.DisplayFor(model => model.Vung.TenVung)</dd>
+
+        <dt>Tên sản phẩm</dt>
+        <dd>@Html.DisplayFor(model => model.TenSanPham)</dd>
+
+        <dt>Giá tiền</dt>
+        <dd>@Html.DisplayFor(model => model.GiaTien)</dd>
+
+        <dt>Số lượng tồn</dt>
+        <dd>@Html.DisplayFor(model => model.SoLuong)</dd>
+
+        <dt>Mô tả</dt>
+        <dd>@Html.DisplayFor(model => model.MoTa)</dd>
+
+        <dt>Hình Ảnh</dt>
+        <dd><img src="@Model.HinhAnh" alt="hinh thumbnail" width="400" height="250" /></dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Trở về trang giỏ hàng", "GioHang", "GioHang")
+</p>
